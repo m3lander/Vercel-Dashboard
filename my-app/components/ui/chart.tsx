@@ -68,8 +68,9 @@ const ChartContainer = React.forwardRef<
 ChartContainer.displayName = "Chart"
 
 const ChartStyle = ({ id, config }: { id: string; config: ChartConfig }) => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const colorConfig = Object.entries(config).filter(
-    ([, config]) => config.theme || config.color
+    ([__, config]) => config.theme || config.color
   )
 
   if (!colorConfig.length) {
